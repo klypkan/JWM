@@ -1,6 +1,6 @@
 # JWM 1.0
 
-JWM - jQuery Widget Markup. The JWL.js makes possible to use jQuery widgets without writing a single line of JavaScript.
+JWM is an acronym for jQuery Widget Markup. The JWL.js makes possible to use jQuery widgets without writing a single line of JavaScript.
 
 ## Quick start
 
@@ -42,4 +42,14 @@ After use of JWM.js:
     </p>
 </body>
 </html>
+```
+## API Documentation
+**data-jwd** - a name of a jQuery widget.
+
+**data-jwd-options** - options of a jQuery widget with a value containing one or more comma-separated an option.
+
+**data-jwd-func** - a name of a JavaScript function return options of the the jQuery widget.
+
+```html
+<input type="text" data-jwd="autocomplete" data-jwd-func="availableTags" />
 ```
