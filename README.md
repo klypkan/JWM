@@ -1,4 +1,4 @@
-# JWM 1.0
+# JWM 1.1
 
 JWM is an acronym for jQuery Widget Markup. The JWL.js makes possible to use jQuery widgets without writing a single line of JavaScript.
 
@@ -35,6 +35,11 @@ After use of JWM.js:
     <script src="jquery.js"></script>
     <script src="jquery-ui.js"></script>
     <script src="JWM.js"></script>
+    <script>
+        $(function () {
+            $("[data-jwd]").initWidget();
+        });
+    </script>
 </head>
 <body>
     <p>
