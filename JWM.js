@@ -1,4 +1,4 @@
-//     JWM.js 1.0
+//     JWM.js 1.1
 //     For all details and documentation:
 //     https://github.com/klypkan/JWM
 
@@ -11,9 +11,9 @@
         factory($);
     }
 }(function ($) {
-    $(function () {
+    $.fn.initWidget = function () {
         var jwdAttr = 'data-jwd', dataWidgetEl = null, widget = null, widgetOptionsAttr = null, widgetOptions = null, widgetOptionsFunc = null;
-        $('[' + jwdAttr + ']').each(function (index) {
+        return this.each(function () {
             dataWidgetEl = $(this);
             widget = dataWidgetEl.attr(jwdAttr);
             widgetOptionsAttr = dataWidgetEl.attr(jwdAttr + '-options');
@@ -37,5 +37,5 @@
                 }
             }
         });
-    });
+    };
 }));

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JWML.js jquery-ui</title>
+    <title>An example of using JWM.js with jQuery UI library.</title>
     <link rel="stylesheet" href="jquery-ui.css" />
     <script src="../jquery.js"></script>
     <script src="jquery-ui.js"></script>
     <script src="../../JWM.js"></script>
     <script>
+        $(function () {
+            $("[data-jwd]").initWidget();
+        });
+
         function availableTags() {
             return {
                 source: [
@@ -37,6 +41,7 @@
     </script>
 </head>
 <body>
+    <h1>An example of using JWM.js with jQuery UI library.</h1>
     <h2>Datepicker</h2>
     <p>
         Date:<input type="text" data-jwd="datepicker" data-jwd-options="minDate: 0, maxDate: +1M +10D" />
