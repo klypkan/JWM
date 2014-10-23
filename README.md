@@ -4,7 +4,7 @@ JWM is an acronym for jQuery Widget Markup. The JWL.js makes possible to use jQu
 
 ## Quick start
 
-Before use of JWM.js:
+Before using of JWM.js:
 ```html
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@ Before use of JWM.js:
 </html>
 ```
 
-After use of JWM.js:
+After using of JWM.js:
 ```html
 <!DOCTYPE html>
 <html>
