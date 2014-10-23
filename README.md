@@ -46,12 +46,19 @@ After use of JWM.js:
         Date:<input type="text" data-jwd="datepicker" data-jwd-options="minDate: 0, maxDate: +1M +10D" />
     </p>
      <p>
-        Date:<input type="text" data-jwd="spinner" />
+        Number:<input type="text" data-jwd="spinner" />
     </p>
 </body>
 </html>
 ```
 ## API Documentation
+### Methods 
+**$(selector).initWidget([options])** - to initial a jQuery widget.
+```javascript
+$("[data-jwd]").initWidget({ attrPrefix: "data-jwd" });
+```
+
+### Attributes
 **data-jwd** - a name of a jQuery widget.
 
 **data-jwd-options** - options of a jQuery widget with a value containing one or more comma-separated an option.

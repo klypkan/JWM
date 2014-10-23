@@ -1,5 +1,6 @@
 $(function () {
     $("[data-jwd]").initWidget();
+    //$("[data-jwd]").initWidget({ attrPrefix: "data-jwd" });//call with options
 });
 
 function availableTags() {

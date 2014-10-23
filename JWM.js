@@ -11,12 +11,13 @@
         factory($);
     }
 }(function ($) {
-    $.fn.initWidget = function () {
-        var jwdAttr = 'data-jwd', dataWidgetEl = null, widget = null, widgetOptionsAttr = null, widgetOptions = null, widgetOptionsFunc = null;
+    $.fn.initWidget = function (options) {
+        var options = options || { attrPrefix: 'data-jwd' };
+        var attrPrefix = options.attrPrefix, dataWidgetEl = null, widget = null, widgetOptionsAttr = null, widgetOptions = null, widgetOptionsFunc = null;
         return this.each(function () {
             dataWidgetEl = $(this);
-            widget = dataWidgetEl.attr(jwdAttr);
-            widgetOptionsAttr = dataWidgetEl.attr(jwdAttr + '-options');
+            widget = dataWidgetEl.attr(attrPrefix);
+            widgetOptionsAttr = dataWidgetEl.attr(attrPrefix + '-options');
             if (widgetOptionsAttr) {
                 widgetOptions = {};
                 var attrItems = widgetOptionsAttr.split(',');
@@ -28,7 +29,7 @@
                 dataWidgetEl[widget](widgetOptions);
             }
             else {
-                widgetOptionsFunc = dataWidgetEl.attr(jwdAttr + '-func');
+                widgetOptionsFunc = dataWidgetEl.attr(attrPrefix + '-func');
                 if (widgetOptionsFunc) {
                     dataWidgetEl[widget](window[widgetOptionsFunc]());
                 }
